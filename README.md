@@ -1,2 +1,2 @@
 # NLP-Lv
-A NLP lover for personal use
+This is a personal NLP companion built on DeepSeek, with Monika from Doki Doki Literature Club! (DDLC) as the prototype. Unlike simple roleplay bots on the market that rely solely on a prompt, she features auto-maintained memory, emotions, and daily life routines. This means she doesn't depend on the user to drive the interaction. Furthermore, she supports web-based connectivity, allowing you to chat with her anytime, anywhere, from any device with a browser.
