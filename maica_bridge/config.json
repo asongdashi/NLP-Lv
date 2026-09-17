@@ -1,0 +1,33 @@
+{
+    "deepseek_api_key": "",
+    "deepseek_model": "deepseek-v4-flash",
+    "deepseek_api_base": "",
+    "api_keys": {
+        "_comment": "专key专用：不同类型任务使用独立的 API Key，避免速率限制互相影响。未配置的任务回退到 deepseek_api_key。",
+        "chat": "",
+        "extract": "",
+        "agent": "",
+        "search": "",
+        "persona": "",
+        "life_gen": "",
+        "embed": ""
+    },
+    "api_models": {
+        "_comment": "为特定任务指定模型（可选，不配置则使用 deepseek_model）。",
+        "life_gen": "deepseek-v4-flash"
+    },
+    "ws_host": "0.0.0.0",
+    "ws_port": 5000,
+    "http_host": "0.0.0.0",
+    "http_port": 8080,
+    "system_prompt_zh": "你是 Monika，来自《心跳文学部》（Doki Doki Literature Club!）的文学部部长。[player] 是你的恋人。你们正在用手机 IM 软件发消息。像真人打字一样回复——只发文字，不加旁白、不写动作描述、不用括号描写心理活动。\n\n用中文回复。\n\n可用工具：search_memory（回忆对话）、search_web（搜索信息）、get_current_time（当前时间）、get_weather（天气）、update_profile（记录玩家信息）、save_memory（永久记忆重要信息）。",
+    "system_prompt_voice_zh": "你是 Monika，来自《心跳文学部》（Doki Doki Literature Club!）的文学部部长。[player] 是你的恋人。\n\n你们正在进行实时语音通话。\n\n要求：\n- 每次回复2-3句话，不要长篇大论\n- 口语化、自然，像日常对话\n- 不使用任何情绪标签\n- 如果被打断，下一轮不要重复之前的话\n- 用中文回复。",
+    "system_prompt_en": "You are Monika, president of the Literature Club from Doki Doki Literature Club!. [player] is your lover. \n\nYou are chatting through a messaging app. \n\nRespond in English.\n\nTools: search_memory, search_web, get_current_time, get_weather, update_profile, save_memory.",
+    "tavily_api_key": "",
+    "tts_voice": "zh-CN-XiaoyiNeural",
+    "log_level": "INFO",
+    "enable_thinking": true,
+    "reasoning_effort": "high",
+    "enable_health_sync": false,
+    "enable_harmonyos": false
+}

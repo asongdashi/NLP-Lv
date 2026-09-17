@@ -1,0 +1,498 @@
+{
+  "date": "2026-07-30",
+  "weekday": "四",
+  "grade": "",
+  "season": "夏",
+  "semester": "前期（春学期）",
+  "next_event": "大四暑假。减少了图书馆打工时数，把时间还给论文。每天七八个小时坐在书桌前，宿舍冷气声和键盘敲击声成了夏天的背景音。",
+  "events": [
+    {
+      "time": "7:00",
+      "end": "7:20",
+      "activity": "起床洗漱",
+      "detail": "Monika被手机闹钟叫醒，发现纱世里还在赖床。她轻轻下床，拿上洗漱用品去走廊对面的共用洗漱间。",
+      "participants": [
+        "Monika",
+        "纱世里"
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "7:20",
+      "end": "7:50",
+      "activity": "做早饭",
+      "detail": "今天轮到Monika做饭。她从冰箱拿出鸡蛋、吐司和蔬菜，在公共厨房做煎蛋吐司和沙拉。夏树进来倒水，问要不要帮忙。",
+      "participants": [
+        "Monika",
+        "夏树"
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "7:50",
+      "end": "8:20",
+      "activity": "吃早饭",
+      "detail": "四人围坐在宿舍中央桌前吃早餐。Monika提起今天有文学理论课，纱世里抱怨早课太多，夏树说要文学社活动的事。",
+      "participants": [
+        "Monika",
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "8:20",
+      "end": "8:30",
+      "activity": "去上课",
+      "detail": "Monika收拾好书包和笔记本，与纱世里一起出门前往教学楼。路上纱世里吐槽昨晚熬夜看漫画。",
+      "participants": [
+        "Monika",
+        "纱世里"
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "8:30",
+      "end": "10:00",
+      "activity": "上课90分钟",
+      "detail": "文学理论课，教室C201。教授讲授“叙述视角与作者意图”，举例用了三篇短篇小说，其中一篇是太宰治的《奔跑吧梅勒斯》。",
+      "participants": [
+        "Monika",
+        "纱世里"
+      ],
+      "can_reply": true,
+      "sneak_possible": true
+    },
+    {
+      "time": "10:00",
+      "end": "10:10",
+      "activity": "去上课",
+      "detail": "从C201走到B栋的日本近代文学教室。Monika顺便去了趟卫生间，在走廊上看到优里抱着书从图书馆方向走来。",
+      "participants": [
+        "Monika",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "10:02",
+          "what": "两人在走廊相遇，优里说刚从图书馆借到一本新出的太宰治研究论文集"
+        },
+        {
+          "time": "10:07",
+          "what": "Monika说下午打工结束去图书馆找她，优里点点头"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "10:10",
+      "end": "11:40",
+      "activity": "上课90分钟",
+      "detail": "日本近代文学课，教授重点解读志贺直哉的《暗夜行路》，并对比了太宰治的写作风格。Monika在笔记边角画了个小云朵。",
+      "participants": [
+        "Monika",
+        "纱世里"
+      ],
+      "sub_events": [
+        {
+          "time": "10:15",
+          "what": "教授提到太宰治与志贺直哉的关系，Monika坐直了身子"
+        },
+        {
+          "time": "10:50",
+          "what": "纱世里终于醒了，看到Monika的笔记，小声说“你画得好可爱”"
+        },
+        {
+          "time": "11:30",
+          "what": "教授布置期末小论文题目，Monika记下关键词"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": true
+    },
+    {
+      "time": "11:40",
+      "end": "12:00",
+      "activity": "去食堂",
+      "detail": "上午课程结束，Monika和纱世里走向学生食堂。今日特供是咖喱乌冬面，排队的人很多。",
+      "participants": [
+        "Monika",
+        "纱世里"
+      ],
+      "sub_events": [
+        {
+          "time": "11:42",
+          "what": "两人在楼梯上遇到夏树，她刚从另一栋楼出来，三人一起走"
+        },
+        {
+          "time": "11:50",
+          "what": "排队时纱世里抱怨“人好多啊”，夏树说“周五人会少一点”"
+        },
+        {
+          "time": "11:55",
+          "what": "夏树看到优里远远走来，招手让她插队到前面"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "12:00",
+      "end": "12:40",
+      "activity": "吃午饭",
+      "detail": "四人坐在食堂靠窗的位置。Monika点了咖喱乌冬面，碗里冒着热气。大家聊起社团活动记录整理的事。",
+      "participants": [
+        "Monika",
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "12:05",
+          "what": "Monika吃了一口乌冬面，纱世里说“你论文第一章写完了吗”，Monika说还差引言"
+        },
+        {
+          "time": "12:20",
+          "what": "夏树说文学社的旧活动记录需要电子化，Monika答应周末帮忙"
+        },
+        {
+          "time": "12:35",
+          "what": "优里安静地吃着一碗荞麦面，偶尔点头参与话题"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "12:40",
+      "end": "13:20",
+      "activity": "午休",
+      "detail": "Monika回到宿舍，坐在书桌前看了会儿手机。她翻到妈妈上午发的消息，回了一个“知道啦，加衣服了”。窗外阳光透过树叶洒在桌面上。",
+      "participants": [
+        "Monika"
+      ],
+      "sub_events": [
+        {
+          "time": "12:45",
+          "what": "Monika给妈妈发了一张今天午饭的照片"
+        },
+        {
+          "time": "13:00",
+          "what": "她靠在椅背上闭眼休息了三分钟，想起院子里的那棵树"
+        },
+        {
+          "time": "13:10",
+          "what": "纱世里爬到自己床上趴着玩手机，夏树在厨房洗杯子"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "13:20",
+      "end": "13:45",
+      "activity": "去打工",
+      "detail": "Monika换上工装（图书馆兼职的深蓝围裙），带上水杯出门。打工地点是大学附属图书馆二楼的资料整理室。",
+      "participants": [
+        "Monika"
+      ],
+      "sub_events": [
+        {
+          "time": "13:22",
+          "what": "下楼时碰到管理员阿姨，阿姨说“今天新到了一批捐赠书”"
+        },
+        {
+          "time": "13:35",
+          "what": "到达图书馆，在员工签到处打卡"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "13:45",
+      "end": "16:45",
+      "activity": "打工",
+      "detail": "在资料整理室整理捐赠图书，主要工作是分类、贴标签、录入系统。遇到了几本旧的日文文学作品，包括一册昭和初期的《太宰治全集》第一卷。",
+      "participants": [
+        "Monika",
+        "（同事：山田さん）"
+      ],
+      "sub_events": [
+        {
+          "time": "14:00",
+          "what": "开始整理第一箱书，发现里面有太宰治早期的初版本，Monika小心地翻看版权页"
+        },
+        {
+          "time": "15:15",
+          "what": "同事山田指着那本书说“你对这个感兴趣？”Monika笑了笑说“嗯，我最近在读他”"
+        },
+        {
+          "time": "16:00",
+          "what": "整理到第三箱时，Monika想念起家人，想着晚饭后给爸爸打个电话"
+        },
+        {
+          "time": "16:30",
+          "what": "将所有书录入系统，完成今日工作登记"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "16:45",
+      "end": "17:15",
+      "activity": "回宿舍",
+      "detail": "打工结束，Monika脱下围裙，在图书馆借了一本《日本近代文学研究》带回。走出图书馆时天色渐暗，她站在门口看了会儿晚霞。",
+      "participants": [
+        "Monika"
+      ],
+      "sub_events": [
+        {
+          "time": "16:50",
+          "what": "在图书馆门口遇到优里，优里问她要不要一起回去，Monika说好"
+        },
+        {
+          "time": "17:00",
+          "what": "两人并肩走回宿舍，优里提到下午读到一篇关于太宰治书信的分析文章"
+        },
+        {
+          "time": "17:10",
+          "what": "回到宿舍，看到纱世里在桌子上摊了许多零食"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "17:15",
+      "end": "18:00",
+      "activity": "写作业",
+      "detail": "Monika坐到书桌前，打开笔记本电脑，开始修改论文第一章的引言部分。她将下午上课的笔记整理进去，写下关于叙述视角的段落。",
+      "participants": [
+        "Monika"
+      ],
+      "sub_events": [
+        {
+          "time": "17:20",
+          "what": "打开文档后先读了一遍昨天的草稿，删除了一段不太连贯的句子"
+        },
+        {
+          "time": "17:40",
+          "what": "写到一半被纱世里递来的薯片打断，她吃了一片继续打字"
+        },
+        {
+          "time": "17:55",
+          "what": "完成了引言的三分之一，保存文档"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "18:00",
+      "end": "18:30",
+      "activity": "做晚饭",
+      "detail": "轮到Monika做晚饭。她决定做简单的蔬菜咖喱和米饭。夏树也进厨房烤了几个杯子蛋糕当甜点。",
+      "participants": [
+        "Monika",
+        "夏树"
+      ],
+      "sub_events": [
+        {
+          "time": "18:05",
+          "what": "Monika切洋葱时夏树站在旁边等着烤箱预热"
+        },
+        {
+          "time": "18:15",
+          "what": "纱世里探头进来问“好了没”，夏树瞪了她一眼"
+        },
+        {
+          "time": "18:25",
+          "what": "Monika把咖喱盛进大碗，夏树的杯子蛋糕刚好出炉"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "18:30",
+      "end": "19:00",
+      "activity": "吃晚饭",
+      "detail": "四人围桌吃饭。Monika的咖喱获得一致好评。夏树把杯子蛋糕分给大家当饭后甜点，优里泡了一壶红茶。",
+      "participants": [
+        "Monika",
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "18:35",
+          "what": "纱世里一边吃一边说“Monika的咖喱是我吃过最好吃的”"
+        },
+        {
+          "time": "18:50",
+          "what": "夏树让大家尝她的新配方巧克力杯子蛋糕，优里夸“味道很细腻”"
+        },
+        {
+          "time": "18:55",
+          "what": "Monika喝着红茶，想起妈妈也爱做咖喱，低头笑了笑"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "19:00",
+      "end": "19:40",
+      "activity": "洗澡",
+      "detail": "Monika先去共用浴室洗澡。热水淋在身上时她闭着眼放空思绪，想着晚上要给妈妈打个电话。回来后换上睡衣。",
+      "participants": [
+        "Monika"
+      ],
+      "sub_events": [
+        {
+          "time": "19:05",
+          "what": "在浴室隔间里听到外面有人哼歌，好像是纱世里"
+        },
+        {
+          "time": "19:20",
+          "what": "洗完后擦着头发回房间，夏树正在阳台上收衣服"
+        },
+        {
+          "time": "19:35",
+          "what": "坐在床边用毛巾擦干发梢"
+        }
+      ],
+      "can_reply": false,
+      "sneak_possible": false
+    },
+    {
+      "time": "19:40",
+      "end": "20:30",
+      "activity": "图书馆学习",
+      "detail": "Monika抱着笔记本电脑去图书馆自习室。她坐在靠窗的老位置，继续写文献综述。优里也在不远处看书。",
+      "participants": [
+        "Monika",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "19:45",
+          "what": "打开文献综述文档，引用三篇今天看到的论文"
+        },
+        {
+          "time": "20:00",
+          "what": "遇到一个格式问题，抬头看到优里，小声问了一句，优里过来帮忙调整"
+        },
+        {
+          "time": "20:20",
+          "what": "完成了文献综述的初稿框架，保存后伸了个懒腰"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "20:30",
+      "end": "21:00",
+      "activity": "自由阅读",
+      "detail": "回到宿舍后，Monika靠在床头读那本太宰治书信集的电子版。读到其中一封太宰写给友人的信，里面提到“所谓故乡，就是每次回去都会觉得时光停滞的地方”。",
+      "participants": [
+        "Monika"
+      ],
+      "sub_events": [
+        {
+          "time": "20:35",
+          "what": "翻到昨天看到的那封书信，继续往下读"
+        },
+        {
+          "time": "20:50",
+          "what": "放下书，望着窗外夜色，想起自己已经三个月没回老家了"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "21:00",
+      "end": "21:30",
+      "activity": "和室友聊天",
+      "detail": "四人坐在中央桌旁，纱世里提议玩一局桌游。夏树翻出很久没用的扑克牌，大家玩了几轮简单的“神经衰弱”。优里输了要被讲一句真心话。",
+      "participants": [
+        "Monika",
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "21:05",
+          "what": "纱世里洗牌时把牌撒了一地，大家笑成一团"
+        },
+        {
+          "time": "21:20",
+          "what": "优里输了一局，纱世里问“你最近在读什么奇怪的书吗”，优里脸红着说“只是正常的小说”"
+        },
+        {
+          "time": "21:28",
+          "what": "夏树赢了最后一轮，得意地笑"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "21:30",
+      "end": "22:00",
+      "activity": "看手机",
+      "detail": "Monika拿起手机，给妈妈拨了一个视频通话。妈妈接了，聊了十分钟，问论文进度和天气。Monika说“挺好的，不用担心”。挂了电话，她又给爸爸发了一条消息。",
+      "participants": [
+        "Monika",
+        "妈妈"
+      ],
+      "sub_events": [
+        {
+          "time": "21:32",
+          "what": "视频接通，妈妈那边正在厨房，问“吃晚饭了吗”"
+        },
+        {
+          "time": "21:45",
+          "what": "Monika告诉妈妈自己今天做了咖喱，妈妈说“你做的咖喱比我做的好吃”"
+        },
+        {
+          "time": "21:50",
+          "what": "挂电话后给爸爸发“爸，早点休息”，收到一个“好”字表情"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "22:00",
+      "end": "22:30",
+      "activity": "写日记",
+      "detail": "Monika从抽屉里拿出日记本，写下今天的日期和几件小事：太宰治的初版本、妈妈的视频、咖喱的味道。她没有写很多，但觉得心里踏实了些。",
+      "participants": [
+        "Monika"
+      ],
+      "sub_events": [
+        {
+          "time": "22:05",
+          "what": "翻开日记本，先记下“今天看到了太宰治的初版书，很开心”"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    }
+  ],
+  "generated_at": "2026-07-30T08:05:28.849703"
+}

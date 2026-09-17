@@ -1,0 +1,453 @@
+{
+  "date": "2026-07-16",
+  "weekday": "四",
+  "grade": "",
+  "season": "夏",
+  "semester": "前期（春学期）",
+  "next_event": "大四前期考试。科目很少，但论文写作和考试同步进行，精力比想象中消耗得快。",
+  "events": [
+    {
+      "time": "7:00",
+      "end": "7:15",
+      "activity": "起床洗漱",
+      "detail": "闹钟响后爬起，去走廊对面洗漱间刷牙洗脸。看到纱世里还在被窝里咕哝，顺手拍了她一下。",
+      "participants": [
+        "纱世里"
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "7:15",
+      "end": "7:30",
+      "activity": "做早饭",
+      "detail": "今天轮到我做早饭，从冰箱拿出鸡蛋和吐司，煎蛋时夏树探头问能不能加芝士。厨房窗开着，有风。",
+      "participants": [
+        "夏树"
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "7:30",
+      "end": "7:50",
+      "activity": "吃早饭",
+      "detail": "四人围坐在中央桌旁。优里泡了红茶，纱世里咬着吐司说昨晚又熬夜看漫画。我提醒她今天第一节有课。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "7:50",
+      "end": "8:00",
+      "activity": "去上课",
+      "detail": "拎着书包和马克杯出门，下楼梯时遇到隔壁寝室的学姐打了声招呼。教学楼步行7分钟。",
+      "participants": [],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "8:00",
+      "end": "9:30",
+      "activity": "上课90分钟",
+      "detail": "文学部「近代小说论」在2202教室。教授分析太宰治《斜阳》的叙事视角，我边听边在笔记本上记下可用于论文引言的思路。",
+      "participants": [],
+      "can_reply": true,
+      "sneak_possible": true
+    },
+    {
+      "time": "9:30",
+      "end": "9:40",
+      "activity": "去上课",
+      "detail": "穿过校园中庭去3号馆。枫叶正绿，看到公告栏贴着桜文会纳新海报，拍了张照打算发群里。",
+      "participants": [],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "9:40",
+      "end": "11:10",
+      "activity": "上课90分钟",
+      "detail": "言语学概論「音韻論の基礎」在3103教室。教授用录音对比「か」和「が」的清浊，做了笔记整理考试提纲。",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "10:15",
+          "what": "小组练习发音"
+        },
+        {
+          "time": "10:45",
+          "what": "整理课堂笔记"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": true
+    },
+    {
+      "time": "11:10",
+      "end": "11:20",
+      "activity": "回宿舍",
+      "detail": "下课铃响后走回宿舍，把课本放回书桌。看到优里在阳台看书，打了声招呼。",
+      "participants": [
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "11:10",
+          "what": "推开宿舍门"
+        },
+        {
+          "time": "11:15",
+          "what": "和优里聊了句课堂内容"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "11:20",
+      "end": "12:00",
+      "activity": "写作业",
+      "detail": "坐在桌前打开电脑，趁午饭前写了一段论文引言（约150字）。纱世里躺床上刷手机，时不时哼歌。",
+      "participants": [
+        "纱世里"
+      ],
+      "sub_events": [
+        {
+          "time": "11:20",
+          "what": "打开Word文档"
+        },
+        {
+          "time": "11:40",
+          "what": "完成第一段草稿"
+        },
+        {
+          "time": "11:50",
+          "what": "检查错别字"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "12:00",
+      "end": "12:40",
+      "activity": "吃午饭",
+      "detail": "在食堂二楼靠窗座位，四人到齐。聊到上午课上的趣事，夏树吐槽语言学教授口音太重。我点了亲子丼。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "12:00",
+          "what": "排队打饭"
+        },
+        {
+          "time": "12:15",
+          "what": "纱世里分享新买的抹茶饼干"
+        },
+        {
+          "time": "12:30",
+          "what": "讨论周末是否去书店"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "12:40",
+      "end": "13:10",
+      "activity": "午休",
+      "detail": "回宿舍后躺床上小憩。设了13:10的闹钟，闭眼时听到优里翻书页的声音。",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "12:40",
+          "what": "拉上窗帘"
+        },
+        {
+          "time": "12:50",
+          "what": "浅浅睡着"
+        },
+        {
+          "time": "13:05",
+          "what": "闹钟响"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "13:10",
+      "end": "13:50",
+      "activity": "去打工",
+      "detail": "换上打工的围裙，带好水壶。步行15分钟到图书馆，和下午班的同事交接。",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "13:10",
+          "what": "整理随身物品"
+        },
+        {
+          "time": "13:25",
+          "what": "到达图书馆柜台"
+        },
+        {
+          "time": "13:40",
+          "what": "确认今日排班"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "13:50",
+      "end": "17:00",
+      "activity": "打工",
+      "detail": "在图书馆总服务台负责借还书和整理书架。中间帮一位老教授找绝版资料，心情很好。",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "13:50",
+          "what": "开始处理还书"
+        },
+        {
+          "time": "14:30",
+          "what": "整理文学区书架"
+        },
+        {
+          "time": "15:15",
+          "what": "帮学生找参考书"
+        },
+        {
+          "time": "16:00",
+          "what": "录入新到杂志"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "17:00",
+      "end": "17:30",
+      "activity": "回宿舍",
+      "detail": "打工结束，沿路买了明天的面包。回到房间发现夏树在厨房烤纸杯蛋糕，香味飘进来。",
+      "participants": [
+        "夏树"
+      ],
+      "sub_events": [
+        {
+          "time": "17:00",
+          "what": "经过面包店"
+        },
+        {
+          "time": "17:15",
+          "what": "进宿舍楼"
+        },
+        {
+          "time": "17:20",
+          "what": "闻见蛋糕味探头看"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "17:30",
+      "end": "18:00",
+      "activity": "做晚饭",
+      "detail": "今天轮到我做晚餐，决定做咖喱。切洋葱时纱世里跑来帮忙，被熏得眼泪直流。",
+      "participants": [
+        "纱世里"
+      ],
+      "sub_events": [
+        {
+          "time": "17:30",
+          "what": "洗米煮饭"
+        },
+        {
+          "time": "17:45",
+          "what": "切洋葱和土豆"
+        },
+        {
+          "time": "17:55",
+          "what": "咖喱块下锅"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "18:00",
+      "end": "18:40",
+      "activity": "吃晚饭",
+      "detail": "四人围着中央桌吃咖喱饭。优里夸咖喱辣度刚好，夏树把烤好的纸杯蛋糕当餐后甜点分给大家。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "18:00",
+          "what": "盛饭开动"
+        },
+        {
+          "time": "18:15",
+          "what": "纱世里添第二碗"
+        },
+        {
+          "time": "18:30",
+          "what": "吃蛋糕聊学校八卦"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "18:40",
+      "end": "19:30",
+      "activity": "洗澡",
+      "detail": "拿着浴篮去走廊对面浴室。热水冲掉一天疲惫，出来时遇到同层学姐简单聊了两句。",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "18:40",
+          "what": "淋浴洗头"
+        },
+        {
+          "time": "19:00",
+          "what": "冲身体"
+        },
+        {
+          "time": "19:15",
+          "what": "吹头发"
+        }
+      ],
+      "can_reply": false,
+      "sneak_possible": false
+    },
+    {
+      "time": "19:30",
+      "end": "21:00",
+      "activity": "写作业",
+      "detail": "坐在书桌前继续论文引言，写到300字目标后开始整理语言学科笔记。优里在对面看书，偶尔抬头讨论一个句子。",
+      "participants": [
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "19:30",
+          "what": "打开论文文档"
+        },
+        {
+          "time": "20:00",
+          "what": "完成今日定额改语法"
+        },
+        {
+          "time": "20:30",
+          "what": "拿出笔记本整理音韵论"
+        },
+        {
+          "time": "21:00",
+          "what": "合上电脑伸懒腰"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "21:00",
+      "end": "22:00",
+      "activity": "自由阅读",
+      "detail": "从书柜抽出太宰治《人间失格》重读，在边角贴便利贴标注以后论文可能用到的段落。优里递来一杯红茶。",
+      "participants": [
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "21:00",
+          "what": "泡红茶"
+        },
+        {
+          "time": "21:20",
+          "what": "读到揪心处叹气"
+        },
+        {
+          "time": "21:45",
+          "what": "和优里交换阅读感受"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "22:00",
+      "end": "22:30",
+      "activity": "和室友聊天",
+      "detail": "四人都在房间里。夏树说明天想烤草莓蛋糕，纱世里提议周末去河边野餐。我笑着附和，边定闹钟。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "22:00",
+          "what": "讨论周末计划"
+        },
+        {
+          "time": "22:15",
+          "what": "优里提议带诗集去野餐"
+        },
+        {
+          "time": "22:25",
+          "what": "夏树抱怨纱世里乱扔袜子"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "22:30",
+      "end": "23:00",
+      "activity": "洗漱准备睡",
+      "detail": "去洗漱间刷牙洗脸，回来换上睡衣。检查了一遍明天上课的课本和论文U盘。优里还在看书，提醒她关灯。",
+      "participants": [
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "22:30",
+          "what": "洗漱间刷牙"
+        },
+        {
+          "time": "22:45",
+          "what": "铺床"
+        },
+        {
+          "time": "22:55",
+          "what": "和优里说晚安"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "23:00",
+      "end": "07:00",
+      "activity": "睡觉",
+      "detail": "关掉台灯，窗外传来夜风。纱世里已经打起了轻鼾，我闭上眼睛。",
+      "participants": [],
+      "can_reply": false,
+      "sneak_possible": false
+    }
+  ],
+  "generated_at": "2026-07-17T08:44:35.754319"
+}

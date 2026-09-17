@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>语音通话 - Monika</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: #1a1a2e; color: #e0e0e0;
+  display: flex; flex-direction: column; align-items: center;
+  height: 100dvh; font-family: system-ui;
+}
+.status {
+  margin-top: 15vh; font-size: 18px; color: #888;
+  text-align: center;
+}
+.avatar {
+  margin-top: 5vh; width: 120px; height: 120px; border-radius: 60px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px; transition: transform 0.3s;
+}
+.avatar.speaking { animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+.subtitle {
+  margin-top: 3vh; font-size: 16px; max-width: 80vw;
+  text-align: center; color: #ccc; min-height: 48px;
+}
+.controls {
+  margin-top: auto; margin-bottom: 8vh;
+  display: flex; gap: 24px;
+}
+.btn {
+  width: 64px; height: 64px; border-radius: 32px; border: none;
+  font-size: 28px; cursor: pointer; transition: 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.btn-call { background: #4caf50; color: #fff; }
+.btn-call:hover { background: #388e3c; }
+.btn-hangup { background: #e53935; color: #fff; }
+.btn-hangup:hover { background: #b71c1c; }
+.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="status" id="status">准备就绪</div>
+<div class="avatar" id="avatar">🎙</div>
+<div class="subtitle" id="subtitle"></div>
+
+<div class="controls">
+  <button class="btn btn-call hidden" id="btnCall" onclick="startCall()">📞</button>
+  <button class="btn btn-hangup hidden" id="btnHangup" onclick="endCall()">📴</button>
+</div>
+
+<script>
+const WS_URL = `ws://${location.hostname}:5000`;
+let ws = null;
+let audioCtx = null;
+let stream = null;
+let processor = null;
+let ringBuf = [];
+let silenceFrames = 0;
+const SILENCE_MAX = 60;  // ~1.3s 静默阈值
+let speaking = false;
+let inCall = false;
+
+// ── VAD（简易能量检测）──
+function isSilence(buf) {
+  let sum = 0;
+  for (let i = 0; i < buf.length; i++) sum += Math.abs(buf[i]);
+  return (sum / buf.length) < 0.70;
+}
+
+function log(msg) {
+  const s = document.getElementById('status');
+  s.textContent = msg;
+}
+
+// ── WS ──
+function connectWS() {
+  ws = new WebSocket(WS_URL);
+  ws.binaryType = "arraybuffer";
+  ws.onopen = () => {
+    document.getElementById('status').textContent = "已连接 — 点击开始通话";
+    document.getElementById('btnCall').classList.remove('hidden');
+  };
+  ws.onmessage = (ev) => {
+    if (typeof ev.data === 'string') return; // 忽略文字消息
+    playAudio(ev.data);
+  };
+  ws.onclose = () => setTimeout(connectWS, 2000);
+}
+connectWS();
+
+// ── 音频播放 ──
+async function playAudio(data) {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const buf = await audioCtx.decodeAudioData(data);
+  const src = audioCtx.createBufferSource();
+  src.buffer = buf;
+  src.connect(audioCtx.destination);
+  src.start();
+}
+
+// ── 通话 ──
+async function startCall() {
+  inCall = true;
+  document.getElementById('btnCall').classList.add('hidden');
+  document.getElementById('btnHangup').classList.remove('hidden');
+  document.getElementById('status').textContent = "通话中...";
+  document.getElementById('avatar').classList.add('speaking');
+
+  audioCtx = new (window.AudioContext || window.webkitAudioContext())();
+  stream = await navigator.mediaDevices.getUserMedia({ audio: {
+    sampleRate: 16000, channelCount: 1
+  }});
+  const src = audioCtx.createMediaStreamSource(stream);
+  processor = audioCtx.createScriptProcessor(1024, 1, 1);
+
+  processor.onaudioprocess = (e) => {
+    if (!inCall) return;
+    const buf = e.inputBuffer.getChannelData(0);
+    const silence = isSilence(buf);
+
+    if (!speaking && !silence) {
+      speaking = true;
+      ringBuf = [];
+      silenceFrames = 0;
+      log("🎤 检测到语音...");
+    }
+    if (speaking) {
+      ringBuf.push(new Float32Array(buf));
+      if (silence) silenceFrames++;
+      else silenceFrames = 0;
+
+      if (silenceFrames >= SILENCE_MAX && ringBuf.length > 10) {
+        log("📤 发送中...");
+        sendAudio(ringBuf);
+        ringBuf = [];
+        silenceFrames = 0;
+        speaking = false;
+        log("通话中...");
+      }
+    }
+  };
+  src.connect(processor);
+  processor.connect(audioCtx.destination);
+
+  ws.send(JSON.stringify({ type: "voice_start" }));
+}
+
+function sendAudio(chunks) {
+  if (!ws || ws.readyState !== WebSocket.OPEN) return;
+  const totalLen = chunks.reduce((s, c) => s + c.length, 0);
+  const merged = new Float32Array(totalLen);
+  let off = 0;
+  for (const c of chunks) { merged.set(c, off); off += c.length; }
+
+  // Float32 → Int16 PCM → base64（分块编码避免栈溢出）
+  const pcm = new Int16Array(merged.length);
+  for (let i = 0; i < merged.length; i++) pcm[i] = Math.max(-32768, Math.min(32767, merged[i] * 32767));
+
+  const bytes = new Uint8Array(pcm.buffer);
+  let b64 = '';
+  const CHUNK = 4096;
+  for (let i = 0; i < bytes.length; i += CHUNK) {
+    b64 += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
+  }
+  b64 = btoa(b64);
+  const durMs = Math.round(merged.length / audioCtx.sampleRate * 1000);
+  log(`📤 发送 ${durMs}ms 音频...`);
+  try {
+    ws.send(JSON.stringify({ type: "voice_audio", audio: b64, sampleRate: audioCtx.sampleRate }));
+    log(`通话中...`);
+  } catch(e) {
+    log(`发送失败: ${e.message}`);
+  }
+}
+
+function endCall() {
+  inCall = false;
+  ws.send(JSON.stringify({ type: "voice_end" }));
+  if (stream) stream.getTracks().forEach(t => t.stop());
+  if (processor) processor.disconnect();
+  document.getElementById('btnCall').classList.remove('hidden');
+  document.getElementById('btnHangup').classList.add('hidden');
+  document.getElementById('status').textContent = "通话结束";
+  document.getElementById('avatar').classList.remove('speaking');
+  document.getElementById('subtitle').textContent = "";
+}
+</script>
+</body>
+</html>

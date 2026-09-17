@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STT 实时测试</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111;color:#eee;font-family:system-ui;padding:20px}
+h2{margin-bottom:16px;color:#4caf50}
+.controls{margin-bottom:16px}
+button{padding:12px 24px;border:none;border-radius:8px;font-size:16px;cursor:pointer}
+.start{background:#4caf50;color:#fff}
+.stop{background:#e53935;color:#fff}
+.status{margin:8px 0;color:#888;min-height:20px}
+.meter{width:100%;height:8px;background:#333;border-radius:4px;margin:8px 0;overflow:hidden}
+.meter-bar{height:100%;background:#4caf50;width:0%;transition:width 0.1s}
+.log{border:1px solid #333;border-radius:8px;padding:12px;max-height:400px;overflow-y:auto;font-size:14px}
+.log .player{color:#4caf50}
+.log .server{color:#ff9800}
+.log .stats{color:#666;font-size:12px}
+.hidden{display:none}
+</style>
+</head>
+<body>
+
+<h2>🎤 STT 实时测试</h2>
+<div class="controls">
+  <button class="start" id="btnStart" onclick="start()">开始录音</button>
+  <button class="stop hidden" id="btnStop" onclick="stop()">停止</button>
+</div>
+<div class="status" id="status">等待连接...</div>
+<div class="meter"><div class="meter-bar" id="meterBar"></div></div>
+<div class="log" id="log"></div>
+
+<script>
+const WS_URL = `ws://${location.hostname}:5000`;
+let ws, stream, processor, audioCtx;
+let speaking = false, ringBuf = [], silenceFrames = 0;
+const SILENCE_MAX = 60;
+let recStart = 0;
+
+function log(text, cls='') {
+  const d = document.getElementById('log');
+  const t = new Date().toLocaleTimeString();
+  d.innerHTML += `<div class="${cls}">[${t}] ${text}</div>`;
+  d.scrollTop = d.scrollHeight;
+}
+function status(s) { document.getElementById('status').textContent = s; }
+function meter(v) { document.getElementById('meterBar').style.width = Math.min(100,v*100)+'%'; }
+
+function connectWS() {
+  ws = new WebSocket(WS_URL);
+  ws.onopen = () => { status('WS 已连接'); };
+  ws.onmessage = (e) => {
+    try {
+      const d = JSON.parse(e.data);
+      if (d.status === 'stt_result') {
+        log(d.content, 'server');
+        status('就绪');
+      }
+    } catch {}
+  };
+  ws.onclose = () => { status('WS 断开，2秒重连...'); setTimeout(connectWS, 2000); };
+}
+connectWS();
+
+function isSilence(buf) {
+  let sum = 0;
+  for (let i = 0; i < buf.length; i++) sum += Math.abs(buf[i]);
+  const avg = sum / buf.length;
+  meter(avg * 3);
+  return avg < 0.02;
+}
+
+async function start() {
+  document.getElementById('btnStart').classList.add('hidden');
+  document.getElementById('btnStop').classList.remove('hidden');
+  status('请求麦克风...');
+
+  audioCtx = new (window.AudioContext||window.webkitAudioContext)();
+  stream = await navigator.mediaDevices.getUserMedia({audio:{sampleRate:16000,channelCount:1}});
+  status(`录音中 (${audioCtx.sampleRate}Hz)`);
+  log(`麦克风已激活，采样率 ${audioCtx.sampleRate}Hz`, 'stats');
+
+  const src = audioCtx.createMediaStreamSource(stream);
+  processor = audioCtx.createScriptProcessor(1024, 1, 1);
+  processor.onaudioprocess = (e) => {
+    const buf = e.inputBuffer.getChannelData(0);
+    const sil = isSilence(buf);
+
+    if (!speaking && !sil) { speaking = true; ringBuf = []; silenceFrames = 0; recStart = Date.now(); }
+    if (speaking) {
+      ringBuf.push(new Float32Array(buf));
+      if (sil) silenceFrames++; else silenceFrames = 0;
+      if (silenceFrames >= SILENCE_MAX && ringBuf.length > 5) {
+        sendAudio(ringBuf);
+        ringBuf = []; silenceFrames = 0; speaking = false;
+      }
+    }
+  };
+  src.connect(processor);
+  processor.connect(audioCtx.destination);
+}
+
+function sendAudio(chunks) {
+  if (!ws || ws.readyState !== WebSocket.OPEN) return;
+  const merged = new Float32Array(chunks.reduce((s,c)=>s+c.length,0));
+  let off = 0;
+  for (const c of chunks) { merged.set(c, off); off += c.length; }
+  const pcm = new Int16Array(merged.length);
+  for (let i = 0; i < merged.length; i++) pcm[i] = Math.max(-32768, Math.min(32767, merged[i]*32767));
+  const bytes = new Uint8Array(pcm.buffer);
+  let b64 = '';
+  for (let i = 0; i < bytes.length; i += 4096) b64 += String.fromCharCode.apply(null, bytes.subarray(i, i+4096));
+  b64 = btoa(b64);
+
+  const dur = Math.round(merged.length / audioCtx.sampleRate * 1000);
+  log(`录音 ${dur}ms → 发送到 STT...`, 'player');
+  status('STT 识别中...');
+  ws.send(JSON.stringify({type:'stt_test',audio:b64,sampleRate:audioCtx.sampleRate}));
+}
+
+function stop() {
+  if (stream) stream.getTracks().forEach(t=>t.stop());
+  if (processor) processor.disconnect();
+  document.getElementById('btnStart').classList.remove('hidden');
+  document.getElementById('btnStop').classList.add('hidden');
+  status('已停止');
+  meter(0);
+}
+</script>
+</body>
+</html>

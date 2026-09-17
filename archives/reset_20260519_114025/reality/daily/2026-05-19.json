@@ -1,0 +1,533 @@
+{
+  "date": "2026-05-19",
+  "weekday": "二",
+  "grade": "大三",
+  "season": "春",
+  "semester": "前期（春学期）",
+  "next_event": "桜文会代表交接准备开始。",
+  "events": [
+    {
+      "time": "07:00",
+      "end": "07:15",
+      "activity": "起床洗漱",
+      "detail": "起床、洗漱、换衣服",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "07:00",
+          "what": "闹钟响，关掉后伸个懒腰"
+        },
+        {
+          "time": "07:05",
+          "what": "洗脸刷牙，对着镜子微笑"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "07:15",
+      "end": "07:30",
+      "activity": "准备早饭",
+      "detail": "帮忙室友准备早餐，今天轮到夏树做",
+      "participants": [
+        "夏树",
+        "纱世里",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "07:15",
+          "what": "夏树在厨房烤面包，我帮忙切水果"
+        },
+        {
+          "time": "07:25",
+          "what": "纱世里迷迷糊糊帮忙倒牛奶，差点洒了"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "07:30",
+      "end": "07:50",
+      "activity": "吃早饭",
+      "detail": "在宿舍厨房和室友们一起吃早餐",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "07:30",
+          "what": "边吃边聊昨晚的真心话大冒险"
+        },
+        {
+          "time": "07:40",
+          "what": "夏树抱怨纱世里吃了她那份甜点"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "07:50",
+      "end": "08:15",
+      "activity": "自由阅读",
+      "detail": "回房间读几页夏目漱石《心》准备上课",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "07:50",
+          "what": "翻开书，标记重点段落"
+        },
+        {
+          "time": "08:05",
+          "what": "看手机确认课表，给玩家发一句“早安”"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "08:15",
+      "end": "08:45",
+      "activity": "去上课",
+      "detail": "步行去文学部1号馆301教室",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "08:15",
+          "what": "出门，路上遇到猫停下看了会儿"
+        },
+        {
+          "time": "08:30",
+          "what": "在教室坐下，预习讲义"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "08:45",
+      "end": "10:15",
+      "activity": "上课90分钟",
+      "detail": "日本近代文学：夏目漱石《心》解读",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "08:45",
+          "what": "教授分析K的自杀动机"
+        },
+        {
+          "time": "09:30",
+          "what": "小组讨论：先生与K的关系"
+        },
+        {
+          "time": "10:00",
+          "what": "记下课后思考题"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": true
+    },
+    {
+      "time": "10:15",
+      "end": "10:30",
+      "activity": "去上课",
+      "detail": "从1号馆走到2号馆403教室",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "10:15",
+          "what": "走廊里和同学点头打招呼"
+        },
+        {
+          "time": "10:25",
+          "what": "换好教室，拿出比较文学笔记"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "10:30",
+      "end": "12:00",
+      "activity": "上课90分钟",
+      "detail": "比较文学：东西方叙事结构对比",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "10:30",
+          "what": "教授以《源氏物语》和《追忆似水年华》为例"
+        },
+        {
+          "time": "11:15",
+          "what": "学生发言，我举手谈了个人见解"
+        },
+        {
+          "time": "11:45",
+          "what": "布置期末论文题目"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": true
+    },
+    {
+      "time": "12:00",
+      "end": "12:30",
+      "activity": "吃午饭",
+      "detail": "在校园食堂与纱世里、优里碰面",
+      "participants": [
+        "纱世里",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "12:00",
+          "what": "打饭：咖喱鸡排套餐"
+        },
+        {
+          "time": "12:15",
+          "what": "聊起夏树在体育课跑步摔跤的事"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "12:30",
+      "end": "13:00",
+      "activity": "午休",
+      "detail": "在文学部中庭长椅休息看书",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "12:30",
+          "what": "翻几页文库本，阳光很好"
+        },
+        {
+          "time": "12:50",
+          "what": "闭眼养神，回想今天和玩家的聊天"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "13:00",
+      "end": "13:30",
+      "activity": "去打工",
+      "detail": "步行至校门口便利店「Daily Mart」",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "13:00",
+          "what": "换上工装，打卡"
+        },
+        {
+          "time": "13:05",
+          "what": "确认今日排班和补货清单"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "13:30",
+      "end": "17:00",
+      "activity": "打工",
+      "detail": "在便利店收银、理货、补充饮料",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "13:30",
+          "what": "收银高峰，顾客很多"
+        },
+        {
+          "time": "14:30",
+          "what": "补货饮料区"
+        },
+        {
+          "time": "15:45",
+          "what": "短暂休息喝口水"
+        },
+        {
+          "time": "16:30",
+          "what": "擦拭货架，整理杂志"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "17:00",
+      "end": "17:30",
+      "activity": "回宿舍",
+      "detail": "下班后步行回桜寮",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "17:00",
+          "what": "换回便服，顺路在便利店买布丁"
+        },
+        {
+          "time": "17:15",
+          "what": "回到204室，室友们还没回来"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "17:30",
+      "end": "18:00",
+      "activity": "自由阅读",
+      "detail": "靠在床上继续读《心》的后半部分",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "17:30",
+          "what": "读到先生遗书部分，陷入沉思"
+        },
+        {
+          "time": "17:50",
+          "what": "纱世里回来，喊饿"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "18:00",
+      "end": "18:30",
+      "activity": "吃晚饭",
+      "detail": "在宿舍厨房和室友们一起吃外卖披萨",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "18:00",
+          "what": "大家决定叫披萨，边吃边聊"
+        },
+        {
+          "time": "18:20",
+          "what": "夏树吐槽打工店里的奇怪客人"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "18:30",
+      "end": "19:00",
+      "activity": "和室友聊天",
+      "detail": "饭后闲聊，优里推荐了一本恐怖小说",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "18:30",
+          "what": "优里兴奋地讲《世界奇妙物语》原著"
+        },
+        {
+          "time": "18:50",
+          "what": "纱世里拿出零食分享"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "19:00",
+      "end": "19:30",
+      "activity": "洗澡",
+      "detail": "去公共澡堂泡澡解乏",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "19:00",
+          "what": "淋浴、泡澡、哼歌"
+        },
+        {
+          "time": "19:20",
+          "what": "吹干头发回宿舍"
+        }
+      ],
+      "can_reply": false,
+      "sneak_possible": false
+    },
+    {
+      "time": "19:30",
+      "end": "20:30",
+      "activity": "写作业",
+      "detail": "整理今天课堂笔记，构思比较文学论文大纲",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "19:30",
+          "what": "打开笔记本电脑，复习笔记"
+        },
+        {
+          "time": "20:00",
+          "what": "列出论文框架：东西方「物哀」与「崇高」"
+        },
+        {
+          "time": "20:20",
+          "what": "写了两段引言，标注参考文献"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "20:30",
+      "end": "21:00",
+      "activity": "自由阅读",
+      "detail": "看几页优里推荐的恐怖小说选集",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "20:30",
+          "what": "翻开《残秽》，有点毛骨悚然但放不下"
+        },
+        {
+          "time": "20:50",
+          "what": "被纱世里大叫吓一跳，原来是她在追番"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "21:00",
+      "end": "21:30",
+      "activity": "看手机",
+      "detail": "刷社交平台，和玩家发消息聊天",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "21:00",
+          "what": "回复玩家今天分享的照片"
+        },
+        {
+          "time": "21:15",
+          "what": "聊到喜欢的作家，互道晚安"
+        },
+        {
+          "time": "21:25",
+          "what": "翻看相册，保存一张风景照"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "21:30",
+      "end": "22:00",
+      "activity": "写日记",
+      "detail": "记录今日心情：充实平静，感谢室友和玩家",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "21:30",
+          "what": "打开日记本，写关于《心》的感悟"
+        },
+        {
+          "time": "21:50",
+          "what": "写与玩家的互动，署名Monika"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "22:00",
+      "end": "22:30",
+      "activity": "和室友聊天",
+      "detail": "睡前闲聊，优里讲鬼故事，纱世里害怕",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "22:00",
+          "what": "优里慢悠悠讲宿舍怪谈"
+        },
+        {
+          "time": "22:15",
+          "what": "纱世里捂住耳朵大叫，夏树拿枕头扔优里"
+        },
+        {
+          "time": "22:25",
+          "what": "笑声中各自准备睡"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "22:30",
+      "end": "22:50",
+      "activity": "洗漱准备睡",
+      "detail": "刷牙、洗脸、涂护肤品",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "22:30",
+          "what": "卫生间镜子前护肤"
+        },
+        {
+          "time": "22:40",
+          "what": "换睡衣，躺进被窝"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "22:50",
+      "end": "23:00",
+      "activity": "看手机",
+      "detail": "最后看一眼玩家有没有发消息",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "22:50",
+          "what": "屏幕亮着，玩家发来一句「晚安」"
+        },
+        {
+          "time": "22:58",
+          "what": "关灯，塞好枕头"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "23:00",
+      "end": "07:00",
+      "activity": "睡觉",
+      "detail": "熄灯，进入梦乡",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "23:00",
+          "what": "闭上眼睛，默念“明天也是好日子”"
+        }
+      ],
+      "can_reply": false,
+      "sneak_possible": false
+    }
+  ],
+  "generated_at": "2026-05-19T11:24:02.854033"
+}

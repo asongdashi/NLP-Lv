@@ -1,0 +1,104 @@
+
+image hf_weather = MASFallbackFilterDisplayable(
+    day=Movie(
+        channel="window_1",
+        play="mod_assets/location/heaven_forest/day.webm",
+        side_mask=True
+    ),
+    sunset=Movie(
+        play="mod_assets/location/heaven_forest/ss.webm",
+        side_mask=True
+    ),
+    night=Movie(
+        channel="window_2",
+        play="mod_assets/location/heaven_forest/night.webm",
+        side_mask=True
+    )
+)
+image hf_weather_fb = MASFallbackFilterDisplayable(
+    day="mod_assets/location/heaven_forest/day.png",
+    sunset="mod_assets/location/heaven_forest/ss.png",
+    night="mod_assets/location/heaven_forest/night.png",
+)
+init -1 python:
+    hf_weather = MASFilterableWeather(
+        "hf_weather_id",
+        "hf_weather_label",
+        ani_img_tag = "hf_weather",
+        img_tag = "hf_weather_fb",
+        precip_type=store.mas_weather.PRECIP_TYPE_DEF,
+        unlocked=False
+    )
+
+    # Likely deprecated! We now use the weather implementation
+    heaven_forest = MASFilterableBackground(
+        # ID
+        "heaven_forest",
+        "heaven_forest",
+
+        # mapping of filters to MASWeatherMaps
+        MASFilterWeatherMap(
+            day=MASWeatherMap({
+                store.mas_weather.PRECIP_TYPE_DEF: "monika_day_room",
+                store.mas_weather.PRECIP_TYPE_RAIN: "monika_day_room",
+                store.mas_weather.PRECIP_TYPE_OVERCAST: "monika_day_room",
+                store.mas_weather.PRECIP_TYPE_SNOW: "monika_day_room",
+            }),
+            night=MASWeatherMap({
+                store.mas_weather.PRECIP_TYPE_DEF: "monika_room",
+                store.mas_weather.PRECIP_TYPE_SNOW: "monika_room",
+            }),
+            sunset=MASWeatherMap({
+                store.mas_weather.PRECIP_TYPE_DEF: "monika_ss_room",
+                store.mas_weather.PRECIP_TYPE_RAIN: "monika_ss_room",
+                store.mas_weather.PRECIP_TYPE_OVERCAST: "monika_ss_room",
+                store.mas_weather.PRECIP_TYPE_SNOW: "monika_ss_room",
+            }),
+        ),
+
+        # filter manager
+        MASBackgroundFilterManager(
+            MASBackgroundFilterChunk(
+                False,
+                None,
+                MASBackgroundFilterSlice.cachecreate(
+                    store.mas_sprites.FLT_NIGHT,
+                    60
+                )
+            ),
+            MASBackgroundFilterChunk(
+                True,
+                None,
+                MASBackgroundFilterSlice.cachecreate(
+                    store.mas_sprites.FLT_SUNSET,
+                    60,
+                    30*60,
+                    10,
+                ),
+                MASBackgroundFilterSlice.cachecreate(
+                    store.mas_sprites.FLT_DAY,
+                    60
+                ),
+                MASBackgroundFilterSlice.cachecreate(
+                    store.mas_sprites.FLT_SUNSET,
+                    60,
+                    30*60,
+                    10,
+                ),
+            ),
+            MASBackgroundFilterChunk(
+                False,
+                None,
+                MASBackgroundFilterSlice.cachecreate(
+                    store.mas_sprites.FLT_NIGHT,
+                    60
+                )
+            )
+        ),
+
+        disable_progressive=True,
+        unlocked=True,
+        entry_pp=store.mas_background._def_background_entry,
+        exit_pp=store.mas_background._def_background_exit,
+    )
+

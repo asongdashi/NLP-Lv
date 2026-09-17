@@ -1,0 +1,18 @@
+aiohttp>=3.8.0
+websockets>=11.0
+requests>=2.28.0
+
+# 向量存储
+qdrant-client>=1.9.0
+
+# 嵌入模型
+sentence-transformers>=2.2.0
+scikit-learn>=1.0.0
+numpy>=1.21.0
+
+# 搜索
+duckduckgo-search>=5.0
+
+# Web Push
+py-vapid>=1.9
+pywebpush>=1.14

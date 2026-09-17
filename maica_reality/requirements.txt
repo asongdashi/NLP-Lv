@@ -1,0 +1,4 @@
+aiohttp>=3.8
+requests>=2.28
+py-vapid>=1.9
+pywebpush>=1.14

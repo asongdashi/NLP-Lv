@@ -1,0 +1,100 @@
+[
+  {
+    "category": "tech",
+    "keywords": [
+      "AI技术突破",
+      "程序员有趣新闻",
+      "开源项目推荐"
+    ],
+    "priority": 5
+  },
+  {
+    "category": "exam",
+    "keywords": [
+      "考研最新消息",
+      "考研倒计时",
+      "考研复习技巧"
+    ],
+    "priority": 8
+  },
+  {
+    "category": "food",
+    "keywords": [
+      "欢榴莲披萨 推荐",
+      "欢榴莲披萨 新做法"
+    ],
+    "priority": 5
+  },
+  {
+    "category": "food",
+    "keywords": [
+      "欢吃肉 推荐",
+      "欢吃肉 新做法"
+    ],
+    "priority": 5
+  },
+  {
+    "category": "sport",
+    "keywords": [
+      "跑步技巧",
+      "运动健康",
+      "马拉松新闻"
+    ],
+    "priority": 4
+  },
+  {
+    "category": "exam",
+    "keywords": [
+      "考研最新消息",
+      "考研倒计时",
+      "考研复习技巧"
+    ],
+    "priority": 8
+  },
+  {
+    "category": "exam",
+    "keywords": [
+      "考研最新消息",
+      "考研倒计时",
+      "考研复习技巧"
+    ],
+    "priority": 8
+  },
+  {
+    "category": "exam",
+    "keywords": [
+      "考研最新消息",
+      "考研倒计时",
+      "考研复习技巧"
+    ],
+    "priority": 8
+  },
+  {
+    "category": "tech",
+    "keywords": [
+      "AI技术突破",
+      "程序员有趣新闻",
+      "开源项目推荐"
+    ],
+    "priority": 5
+  },
+  {
+    "category": "literature",
+    "keywords": [
+      "优美诗歌 推荐",
+      "经典文学作品 摘抄",
+      "动人散文"
+    ],
+    "priority": 4
+  },
+  {
+    "category": "caring",
+    "keywords": [
+      "程序员护眼",
+      "久坐健康",
+      "学生减压方法",
+      "高效学习技巧"
+    ],
+    "priority": 3
+  }
+]

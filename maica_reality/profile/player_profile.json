@@ -1,0 +1,19 @@
+{
+  "player_name": "",
+  "location": {
+    "city": "",
+    "province": "",
+    "country": "中国"
+  },
+  "identity": {
+    "occupation": "",
+    "interests": [],
+    "note": ""
+  },
+  "preferences": {
+    "nickname": "",
+    "language": "zh",
+    "topics_of_interest": []
+  },
+  "updated_at": ""
+}

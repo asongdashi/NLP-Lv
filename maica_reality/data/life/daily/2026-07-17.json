@@ -1,0 +1,592 @@
+{
+  "date": "2026-07-17",
+  "weekday": "五",
+  "grade": "",
+  "season": "夏",
+  "semester": "前期（春学期）",
+  "next_event": "大四前期考试。科目很少，但论文写作和考试同步进行，精力比想象中消耗得快。",
+  "events": [
+    {
+      "time": "07:00",
+      "end": "07:20",
+      "activity": "起床洗漱",
+      "detail": "Monika关掉闹钟，伸了个懒腰。经过纱世里床时发现她卷着被子还在睡，轻轻拍了拍她的肩叫醒她。",
+      "participants": [
+        "纱世里"
+      ],
+      "sub_events": [
+        {
+          "time": "07:00",
+          "what": "起床叠被"
+        },
+        {
+          "time": "07:05",
+          "what": "叫醒纱世里"
+        },
+        {
+          "time": "07:12",
+          "what": "去洗漱间刷牙洗脸"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "07:20",
+      "end": "07:50",
+      "activity": "吃早饭",
+      "detail": "Monika烤了两片吐司，冲了杯咖啡。纱世里睡眼惺忪地坐下，夏树已经吃完开始收拾碗碟，优里安静地倒红茶。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "07:20",
+          "what": "准备简易早餐"
+        },
+        {
+          "time": "07:30",
+          "what": "四人一起吃饭，纱世里说昨晚梦到在河里捞草莓"
+        },
+        {
+          "time": "07:45",
+          "what": "Monika提醒纱世里今天第一节是川村先生的课，别迟到"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "07:50",
+      "end": "08:15",
+      "activity": "去上课",
+      "detail": "Monika背上书包，带上论文U盘。和优里并肩走向人文楼，聊起昨晚看的书。",
+      "participants": [
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "07:50",
+          "what": "换鞋出门"
+        },
+        {
+          "time": "08:00",
+          "what": "路上优里推荐了一本最近读的短篇小说集"
+        },
+        {
+          "time": "08:12",
+          "what": "在教学楼门口遇到同学，一起上楼"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "08:15",
+      "end": "09:00",
+      "activity": "自由时间",
+      "detail": "距离第一节课还有45分钟，Monika在教室找了个角落坐下，翻出论文草稿，在空白处补了两个论点。",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "08:15",
+          "what": "打开笔记本修改引言大纲"
+        },
+        {
+          "time": "08:35",
+          "what": "用手机查了一个参考文献"
+        },
+        {
+          "time": "08:50",
+          "what": "合上电脑，准备上课"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "09:00",
+      "end": "10:30",
+      "activity": "上课90分钟",
+      "detail": "川村教授的“日本近代文学”课，教室203。今天讲志贺直哉的《暗夜行路》。教授播放了一段手稿照片，Monika认真记笔记。",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "09:00",
+          "what": "教授开始讲解创作背景"
+        },
+        {
+          "time": "09:40",
+          "what": "小组讨论主人公的心理变化"
+        },
+        {
+          "time": "10:05",
+          "what": "助教分发补充资料"
+        },
+        {
+          "time": "10:20",
+          "what": "教授布置下周小论文题目"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": true
+    },
+    {
+      "time": "10:30",
+      "end": "10:45",
+      "activity": "去上课",
+      "detail": "从人文楼走到外语楼，路上买了瓶水。遇到也去上课的纱世里，她跑来说自己差点走错教室。",
+      "participants": [
+        "纱世里"
+      ],
+      "sub_events": [
+        {
+          "time": "10:30",
+          "what": "下楼"
+        },
+        {
+          "time": "10:36",
+          "what": "在走廊碰到纱世里，她拍着胸口说“好险好险”"
+        },
+        {
+          "time": "10:42",
+          "what": "各自进教室"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "10:45",
+      "end": "12:15",
+      "activity": "上课90分钟",
+      "detail": "英语写作课，教室305。外教让练习议论文结构，Monika被叫起来读了一段自己的段落，得到“Good structure”的评价。",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "10:45",
+          "what": "外教讲解主题句写法"
+        },
+        {
+          "time": "11:15",
+          "what": "两人一组互评作文"
+        },
+        {
+          "time": "11:40",
+          "what": "Monika上台朗读例文"
+        },
+        {
+          "time": "12:00",
+          "what": "总结下周提交提纲的要求"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": true
+    },
+    {
+      "time": "12:15",
+      "end": "12:30",
+      "activity": "去食堂",
+      "detail": "和纱世里、夏树会合，四人都没带便当，决定去第二食堂。优里已经先到了。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "12:15",
+          "what": "走出教学楼"
+        },
+        {
+          "time": "12:20",
+          "what": "路上夏树抱怨今天鸡蛋煎鱼肉排卖完了"
+        },
+        {
+          "time": "12:28",
+          "what": "在食堂门口找到占座的优里"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "12:30",
+      "end": "13:00",
+      "activity": "吃午饭",
+      "detail": "食堂靠窗四人桌。纱世里点了咖喱饭，Monika选了亲子丼。夏树说起下午社团想试做抹茶杯子蛋糕，优里表示可以带自己的红茶来配。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "12:30",
+          "what": "排队打饭"
+        },
+        {
+          "time": "12:40",
+          "what": "坐下吃饭，纱世里分享她从书包里掏出的布丁"
+        },
+        {
+          "time": "12:50",
+          "what": "夏树认真讨论蛋糕配方，Monika提议可以加一点白巧克力碎"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "13:00",
+      "end": "13:40",
+      "activity": "午休",
+      "detail": "回宿舍，Monika靠在床上看了十几分钟手机，然后闭眼休息。纱世里直接趴在桌上睡着了，夏树在旁边看漫画。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "13:00",
+          "what": "回204室"
+        },
+        {
+          "time": "13:05",
+          "what": "Monika刷了会校园论坛"
+        },
+        {
+          "time": "13:20",
+          "what": "放下手机，戴眼罩小睡"
+        },
+        {
+          "time": "13:35",
+          "what": "被夏树翻页的声音吵醒，坐起来清醒一下"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "13:40",
+      "end": "15:40",
+      "activity": "图书馆学习",
+      "detail": "去大学图书馆。Monika在二楼靠窗位置坐下，打开论文文档。完成了今天的目标字数，又整理了一页考试提纲。",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "13:40",
+          "what": "找位置，打开电脑"
+        },
+        {
+          "time": "14:00",
+          "what": "撰写引言段，写了约350字"
+        },
+        {
+          "time": "14:45",
+          "what": "查阅两篇参考文献并做笔记"
+        },
+        {
+          "time": "15:20",
+          "what": "整理日本近代文学笔记，一页A4"
+        },
+        {
+          "time": "15:35",
+          "what": "收拾东西，准备去社团"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "15:40",
+      "end": "16:00",
+      "activity": "去社团",
+      "detail": "步行到社团活动室——文化会馆二楼。路上给纱世里发消息问有没有需要帮忙带的。",
+      "participants": [
+        "纱世里"
+      ],
+      "sub_events": [
+        {
+          "time": "15:40",
+          "what": "离开图书馆"
+        },
+        {
+          "time": "15:50",
+          "what": "路过便利店，给夏树买了盒牛奶（她做蛋糕常用）"
+        },
+        {
+          "time": "15:56",
+          "what": "到达活动室"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "16:00",
+      "end": "18:00",
+      "activity": "社团活动",
+      "detail": "桜文会例会。纱世里主持讨论了周末野餐的细节，夏树带来刚烤好的抹茶杯子蛋糕，大家边吃边定方案。Monika负责记录。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "16:00",
+          "what": "纱世里敲桌子开始"
+        },
+        {
+          "time": "16:20",
+          "what": "确定野餐地点为河边公园，每人带一样食物"
+        },
+        {
+          "time": "17:00",
+          "what": "休息时间，夏树分发蛋糕，优里泡红茶"
+        },
+        {
+          "time": "17:30",
+          "what": "讨论下期会刊主题，Monika提议做“夏天”特辑"
+        },
+        {
+          "time": "17:50",
+          "what": "收拾活动室，关窗锁门"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "18:00",
+      "end": "18:30",
+      "activity": "回宿舍",
+      "detail": "社团结束，四人一起走回宿舍。夏树说还想烤一批巧克力曲奇明天带，纱世里欢呼。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "18:00",
+          "what": "走出文化会馆"
+        },
+        {
+          "time": "18:10",
+          "what": "路过小超市，夏树进去买了黄油和巧克力豆"
+        },
+        {
+          "time": "18:25",
+          "what": "回到桜寮，上楼进204室"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "18:30",
+      "end": "19:00",
+      "activity": "吃晚饭",
+      "detail": "在宿舍简单吃。优里煮了乌冬面，每人一碗。四人围着中央桌子，纱世里边吃边翻野餐攻略。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "18:30",
+          "what": "优里下面条，夏树帮忙切葱花"
+        },
+        {
+          "time": "18:40",
+          "what": "开动，Monika夸优里的汤底好"
+        },
+        {
+          "time": "18:55",
+          "what": "纱世里用手机投屏找河边的照片"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "19:00",
+      "end": "19:30",
+      "activity": "洗澡",
+      "detail": "Monika先去洗澡。换上睡衣，在洗漱间吹干头发回来。回来后发现夏树已经在厨房预热烤箱了。",
+      "participants": [
+        "夏树"
+      ],
+      "sub_events": [
+        {
+          "time": "19:00",
+          "what": "拿好换洗衣物去浴室"
+        },
+        {
+          "time": "19:15",
+          "what": "淋浴，洗头"
+        },
+        {
+          "time": "19:25",
+          "what": "吹头发"
+        },
+        {
+          "time": "19:30",
+          "what": "回宿舍，看到夏树在忙"
+        }
+      ],
+      "can_reply": false,
+      "sneak_possible": false
+    },
+    {
+      "time": "19:30",
+      "end": "20:30",
+      "activity": "写作业",
+      "detail": "Monika坐在书桌前，打开考试笔记把下午整理的内容誊写到A4纸上，又补充了两条文学史的时间线。",
+      "participants": [],
+      "sub_events": [
+        {
+          "time": "19:30",
+          "what": "摊开笔记和课本"
+        },
+        {
+          "time": "19:50",
+          "what": "完成第二科提纲（近代文学）"
+        },
+        {
+          "time": "20:10",
+          "what": "翻看英语写作课的教材，标记重点"
+        },
+        {
+          "time": "20:25",
+          "what": "把论文U盘插上，备份今天的改动"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "20:30",
+      "end": "21:30",
+      "activity": "自由阅读",
+      "detail": "从书架上抽出太宰治的《Goodbye》，靠在床头读了两章。优里也在旁边看书，两人偶尔交换一个沉默的点头。",
+      "participants": [
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "20:30",
+          "what": "泡了一杯甘菊茶"
+        },
+        {
+          "time": "20:45",
+          "what": "专注阅读，拿铅笔在书页边缘轻轻画线"
+        },
+        {
+          "time": "21:10",
+          "what": "读到有趣的段落，轻声读给优里听"
+        },
+        {
+          "time": "21:25",
+          "what": "合上书，伸个懒腰"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "21:30",
+      "end": "22:00",
+      "activity": "和室友聊天",
+      "detail": "夏树烤完曲奇端出来，大家围坐品尝。纱世里提起周末野餐想玩飞盘，夏树说可以带小音箱。Monika提议各自带垫子。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "21:30",
+          "what": "夏树把曲奇放在桌子中央，还热着"
+        },
+        {
+          "time": "21:40",
+          "what": "纱世里咬了一口，被烫到舌头"
+        },
+        {
+          "time": "21:50",
+          "what": "商量集合时间——上午10点在宿舍楼下"
+        },
+        {
+          "time": "22:00",
+          "what": "Monika提示该收尾了，明天还得早起"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "22:00",
+      "end": "22:30",
+      "activity": "洗漱准备睡",
+      "detail": "Monika率先去刷牙洗脸。回来时优里还在看书，提醒她该睡了。纱世里已经钻进被窝，夏树还在厨房洗模具。",
+      "participants": [
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "22:00",
+          "what": "拿起牙刷和杯去洗漱间"
+        },
+        {
+          "time": "22:15",
+          "what": "擦完护肤品回宿舍"
+        },
+        {
+          "time": "22:20",
+          "what": "催促优里合上书"
+        },
+        {
+          "time": "22:25",
+          "what": "检查闹钟，关掉台灯"
+        }
+      ],
+      "can_reply": true,
+      "sneak_possible": false
+    },
+    {
+      "time": "23:00",
+      "end": "07:00",
+      "activity": "睡觉",
+      "detail": "全宿舍安静下来。窗外有虫鸣，Monika闭上眼睛，很快入睡。",
+      "participants": [
+        "纱世里",
+        "夏树",
+        "优里"
+      ],
+      "sub_events": [
+        {
+          "time": "23:00",
+          "what": "纱世里翻身嘟囔了一句"
+        },
+        {
+          "time": "23:00",
+          "what": "夏树关掉厨房灯，蹑手蹑脚上床"
+        },
+        {
+          "time": "23:00",
+          "what": "优里最后合上书，关床头灯"
+        }
+      ],
+      "can_reply": false,
+      "sneak_possible": false
+    }
+  ],
+  "generated_at": "2026-07-17T08:51:05.114406"
+}

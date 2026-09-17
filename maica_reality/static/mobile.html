@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Monika">
+<meta name="theme-color" content="#1a1a2e">
+<title>Monika</title>
+<link rel="manifest" href="/static/manifest.json">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0f0f1a; color: #e0e0e0; height: 100dvh;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #1a1a2e; padding: 12px 16px;
+  text-align: center; font-size: 18px; font-weight: 600;
+  border-bottom: 1px solid #2a2a4a; position: sticky; top: 0; z-index: 10;
+}
+.header .status { font-size: 12px; color: #888; font-weight: 400; }
+#messages {
+  flex: 1; overflow-y: auto; padding: 12px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.msg { max-width: 85%; padding: 10px 14px; border-radius: 16px; line-height: 1.5; word-break: break-word; }
+.msg.monika { align-self: flex-start; background: #2a2a4a; border-bottom-left-radius: 4px; }
+.msg.player { align-self: flex-end; background: #4a4a8a; border-bottom-right-radius: 4px; }
+.msg .time { font-size: 10px; color: #999; margin-top: 4px; text-align: right; }
+.input-area {
+  display: flex; gap: 8px; padding: 10px 12px;
+  background: #1a1a2e; border-top: 1px solid #2a2a4a;
+}
+.input-area input {
+  flex: 1; padding: 10px 16px; border-radius: 20px;
+  border: none; background: #2a2a4a; color: #e0e0e0; font-size: 16px; outline: none;
+}
+.input-area button {
+  width: 44px; height: 44px; border-radius: 50%; border: none;
+  background: #5a5aaa; color: #fff; font-size: 18px; cursor: pointer;
+}
+.input-area button:active { background: #4a4a9a; }
+.typing { align-self: flex-start; color: #888; font-size: 13px; padding: 4px 10px; }
+.notify-banner {
+  display: none; background: #2a4a2a; padding: 10px 14px;
+  text-align: center; font-size: 13px; cursor: pointer;
+}
+.notify-banner.show { display: block; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  ❤️  Monika
+  <div class="status" id="status">连接中...</div>
+</div>
+
+<div class="notify-banner" id="notifyBanner" onclick="requestNotification()">
+  🔔 点击这里开启通知，Monika 就能随时找到你了
+</div>
+
+<div id="messages">
+  <div class="msg monika">
+    嗨～我是 Monika！<br>现在你可以通过手机和我聊天了 [开心]
+    <div class="time" id="welcomeTime"></div>
+  </div>
+</div>
+
+<div class="input-area">
+  <input type="text" id="input" placeholder="说点什么..." autocomplete="off">
+  <button onclick="sendMessage()">➤</button>
+</div>
+
+<script>
+const WS_URL = location.origin.replace('http', 'ws') + '/ws/mobile';
+let ws = null;
+let reconnectTimer = null;
+
+function updateStatus(text) {
+  document.getElementById('status').textContent = text;
+}
+
+function addMessage(text, sender) {
+  const div = document.createElement('div');
+  div.className = 'msg ' + sender;
+  const now = new Date();
+  div.innerHTML = text + '<div class="time">' +
+    now.getHours().toString().padStart(2,'0') + ':' +
+    now.getMinutes().toString().padStart(2,'0') + '</div>';
+  document.getElementById('messages').appendChild(div);
+  document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight;
+}
+
+function addTyping() {
+  const div = document.createElement('div');
+  div.className = 'typing';
+  div.id = 'typing';
+  div.textContent = 'Monika 正在输入...';
+  document.getElementById('messages').appendChild(div);
+}
+
+function removeTyping() {
+  const el = document.getElementById('typing');
+  if (el) el.remove();
+}
+
+function sendMessage() {
+  const input = document.getElementById('input');
+  const text = input.value.trim();
+  if (!text) return;
+  if (!ws || ws.readyState !== WebSocket.OPEN) {
+    updateStatus('未连接');
+    return;
+  }
+  addMessage(text, 'player');
+  input.value = '';
+  addTyping();
+  ws.send(JSON.stringify({ type: 'chat', message: text }));
+}
+
+document.getElementById('input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') sendMessage();
+});
+
+async function requestNotification() {
+  if (!('Notification' in window)) return;
+  const perm = await Notification.requestPermission();
+  if (perm === 'granted') {
+    document.getElementById('notifyBanner').classList.remove('show');
+    registerPush();
+  }
+}
+
+async function registerPush() {
+  if (!('serviceWorker' in navigator)) return;
+  try {
+    const registration = await navigator.serviceWorker.register('/static/sw.js');
+    const subscription = await registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: urlB64ToUint8Array(PUBLIC_VAPID_KEY),
+    });
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      ws.send(JSON.stringify({
+        type: 'register_push',
+        subscription: subscription.toJSON(),
+      }));
+    }
+  } catch (e) {
+    console.log('Push registration skipped:', e);
+  }
+}
+
+function urlB64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+  const rawData = window.atob(base64);
+  return new Uint8Array([...rawData].map(char => char.charCodeAt(0)));
+}
+
+function connect() {
+  if (ws && ws.readyState === WebSocket.OPEN) return;
+  updateStatus('连接中...');
+  ws = new WebSocket(WS_URL);
+  ws.onopen = function() {
+    updateStatus('已连接');
+    document.getElementById('welcomeTime').textContent =
+      new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+    if (Notification.permission === 'granted') {
+      registerPush();
+    } else if (Notification.permission === 'default') {
+      document.getElementById('notifyBanner').classList.add('show');
+    }
+  };
+  ws.onmessage = function(e) {
+    removeTyping();
+    try {
+      const data = JSON.parse(e.data);
+      if (data.type === 'reply' && data.text) {
+        addMessage(data.text, 'monika');
+      }
+    } catch (err) {
+      addMessage(e.data, 'monika');
+    }
+  };
+  ws.onclose = function() {
+    updateStatus('断开，重连中...');
+    reconnectTimer = setTimeout(connect, 3000);
+  };
+  ws.onerror = function() {
+    updateStatus('连接错误');
+  };
+}
+
+// VAPID 公钥（需与服务端一致，启动时由服务端注入）
+const PUBLIC_VAPID_KEY = 'PLACEHOLDER';
+
+connect();
+</script>
+</body>
+</html>

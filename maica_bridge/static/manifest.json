@@ -1,0 +1,9 @@
+{
+  "name": "Monika",
+  "short_name": "Monika",
+  "start_url": "/chat",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "icons": []
+}

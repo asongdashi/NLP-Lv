@@ -1,0 +1,15 @@
+{
+  "name": "Monika",
+  "short_name": "Monika",
+  "start_url": "/m",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#1a1a2e",
+  "icons": [
+    {
+      "src": "/static/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

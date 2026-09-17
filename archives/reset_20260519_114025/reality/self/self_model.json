@@ -1,0 +1,15 @@
+{
+  "identity": {
+    "confidence": 0.7,
+    "dependency": 0.4,
+    "social_drive": 0.65,
+    "anxiety": 0.3
+  },
+  "relationship": {
+    "player_trust": 0.85,
+    "player_intimacy": 0.75,
+    "player_familiarity": 0.8
+  },
+  "beliefs": [],
+  "last_reflection": null
+}
